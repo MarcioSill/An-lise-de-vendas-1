@@ -57,25 +57,16 @@ public class Sale implements Comparable<Sale> {
 		this.total = total;
 	}
 	
+	
+	
 	public Double averagePrice() {
-		return  total / items;
-	}
-
-		
-	@Override
-	public String toString() {
-		return  month + "/" + year + ", " + seller + ", " + items + ", "
-				+ total ;
+		return  total+ getTotal();
 	}
 
 	@Override
 	public int compareTo(Sale o) {
-		return total.compareTo(o.getTotal());
+		return seller.compareTo(o.getSeller());
 		
 	}
-	
-	
-	
-	
 
 }
